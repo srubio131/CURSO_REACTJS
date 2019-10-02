@@ -2,36 +2,21 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function Hello(props) {
-  return <div>
-            <h2>{props.title}</h2>
-            <h3>Bien chido wey</h3>
-         </div>;
-}
-
-function Text(props) {
-  const { arrayOfNumbers, boolean, element, multiplyFunc, number, text, objectWithInfo } = props;
-
-  const textoSegundoBool = boolean ? 'Cierto' : 'Falso';
-  const mappedNumbers = arrayOfNumbers.map(multiplyFunc);
-  return (
-          <div>
-            <p>{text}</p>
-            <p>{number}</p>
-            <p>{textoSegundoBool}</p>
-            <p>{mappedNumbers.join(', ')}</p>
-            <p>{objectWithInfo.key}</p>
-            {element}
-         </div>
-  )
-}
+import Hello from './components/Hello'
+import Text from './components/Text'
+import Counter from './components/Counter'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+      </header>
+      <body>
+        <h1>Componente Hello</h1>
         <Hello title='Bienvenido a este cursete'></Hello>
+        <hr/>
+        <h1>Componente Text</h1>
         <Text 
           arrayOfNumbers={[2,3,10]}
           boolean={true}
@@ -41,7 +26,11 @@ function App() {
           objectWithInfo={{ key: 'value', key2: 'otherValue'}}
           text='Texto string'
         />
-      </header>
+        <hr/>
+        <h1>Componente Contador</h1>
+        <Counter></Counter>
+        <hr/>
+      </body>
     </div>
   );
 }
