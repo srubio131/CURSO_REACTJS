@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
-    constructor() {
-      super();
-      this.state = { contador: 1 };
+    constructor(props) {
+      super(props);
+      this.state = { contador: this.props.contadorInicial };
       this.incrementCounter(1000, 'contador');
     }
   
@@ -14,7 +14,17 @@ class Counter extends Component {
     }
   
     render() {
-      return <span>{this.state.contador}</span>
+      return <CounterNumber number={ this.state.contador }></CounterNumber>
+    }
+  }
+
+  Counter.defaultProps = {
+    contadorInicial: 0
+  }
+
+  class CounterNumber extends Component {
+    render () {
+      return <span>{this.props.number}</span>
     }
   }
 
