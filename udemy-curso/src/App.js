@@ -10,8 +10,10 @@ import EventsSection from './sections/events';
 import FormControlado from './sections/formControlado';
 import BoxPropChildren from './sections/boxPropChildren';
 import ArticlePropChildren from './sections/articlePropChildren';
+import FetchBitcoin from './sections/fetchBitcoin';
 import ListNumbers from './components/ListNumbers';
 import ListObjectCars from './components/listObjectCars/ListObjectCars';
+import EjemploDeComponentDidMount from './sections/life-cycle/componentDidMount';
 
 function App() {
   return (
@@ -20,6 +22,12 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
       </header>
       <section>
+        <h1>Componente (fetch-api)</h1>
+        <FetchBitcoin />
+        <hr/>
+        <h1>Componente (life-cycle)</h1>
+        <EjemploDeComponentDidMount />
+        <hr/>
         <h1>Componente ArticlePropChildren (props.children & PropTypes)</h1>
         <ArticlePropChildren
           author='Sergio'
