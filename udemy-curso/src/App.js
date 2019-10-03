@@ -8,6 +8,8 @@ import Counter from './components/Counter'
 import ConditionalSection from './sections/conditional';
 import EventsSection from './sections/events';
 import FormControlado from './sections/formControlado';
+import BoxPropChildren from './sections/boxPropChildren';
+import ArticlePropChildren from './sections/articlePropChildren';
 import ListNumbers from './components/ListNumbers';
 import ListObjectCars from './components/listObjectCars/ListObjectCars';
 
@@ -18,6 +20,19 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
       </header>
       <section>
+        <h1>Componente ArticlePropChildren (props.children & PropTypes)</h1>
+        <ArticlePropChildren
+          author='Sergio'
+          date={new Date().toLocaleDateString()}
+          title='Artículo sobre la prop children'>
+          <p>El contenido que envolvemos dentro del componente Article será enviado al componente como this.props.children</p>
+          <strong>Y mantiene las etiquetas y componentes que hayáis añadido dentro</strong>
+        </ArticlePropChildren>
+        <hr/>
+        <h1>Componente BoxPropChildren (props children)</h1>
+        <BoxPropChildren>Hello, premoh!</BoxPropChildren>
+        <BoxPropChildren>Otro premoh, here!</BoxPropChildren>
+        <hr/>
         <h1>Componente Forms</h1>
         <FormControlado />
         <hr/>
