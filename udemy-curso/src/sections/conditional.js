@@ -12,11 +12,11 @@ function handleClick(event) {
 }
 
 class LogginButton extends Component {
-    constructor(sta) {
+    /*constructor(sta) {
         super()
         //this.setState({ userLogged: true })
         //this.handleClick = this.handleClick.bind(this)
-    }
+    }*/
 
     render () {
         return <button onClick={handleClick.bind(this)}>Iniciar Sesión</button>
@@ -24,11 +24,11 @@ class LogginButton extends Component {
 }
 
 class LogoutButton extends Component {
-    constructor() {
+    /*constructor() {
         super()
         //this.setState({ userLogged: false })
         //this.handleClick = this.handleClick.bind(this)
-    }
+    }*/
 
     render () {
         return (

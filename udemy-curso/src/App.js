@@ -7,6 +7,7 @@ import Text from './components/Text'
 import Counter from './components/Counter'
 import ConditionalSection from './sections/conditional';
 import EventsSection from './sections/events';
+import FormControlado from './sections/formControlado';
 import ListNumbers from './components/ListNumbers';
 import ListObjectCars from './components/listObjectCars/ListObjectCars';
 
@@ -17,6 +18,9 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
       </header>
       <section>
+        <h1>Componente Forms</h1>
+        <FormControlado />
+        <hr/>
         <h1>Componente Events (onMouseMove)</h1>
         <EventsSection />
         <hr/>
