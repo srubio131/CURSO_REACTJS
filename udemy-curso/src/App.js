@@ -14,6 +14,10 @@ import FetchBitcoin from './sections/fetchBitcoin';
 import ListNumbers from './components/ListNumbers';
 import ListObjectCars from './components/listObjectCars/ListObjectCars';
 import EjemploDeComponentDidMount from './sections/life-cycle/componentDidMount';
+import ComponentShouldComponentUpdate from './sections/life-cycle/componentShouldComponentUpdate';
+import EjemploDeComponenteWillUnmount from './sections/life-cycle/componentWillUnmount';
+import EjemploDeComponentDidCatch from './sections/life-cycle/componentDidCatch';
+
 
 function App() {
   return (
@@ -22,10 +26,19 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
       </header>
       <section>
+        <h1>Componente (life-cycle --> ComponentDidCatch)</h1>
+        <EjemploDeComponentDidCatch />
+        <hr/>
+        <h1>Componente (life-cycle --> ComponentWillUnmount)</h1>
+        <EjemploDeComponenteWillUnmount />
+        <hr/>
+        <h1>Componente (life-cycle --> ComponentDidMount)</h1>
+        <ComponentShouldComponentUpdate />
+        <hr/>
         <h1>Componente (fetch-api)</h1>
         <FetchBitcoin />
         <hr/>
-        <h1>Componente (life-cycle)</h1>
+        <h1>Componente (life-cycle --> ComponentDidMount)</h1>
         <EjemploDeComponentDidMount />
         <hr/>
         <h1>Componente ArticlePropChildren (props.children & PropTypes)</h1>
