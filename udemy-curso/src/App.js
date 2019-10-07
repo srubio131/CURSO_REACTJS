@@ -17,6 +17,7 @@ import EjemploDeComponentDidMount from './sections/life-cycle/componentDidMount'
 import ComponentShouldComponentUpdate from './sections/life-cycle/componentShouldComponentUpdate';
 import EjemploDeComponenteWillUnmount from './sections/life-cycle/componentWillUnmount';
 import EjemploDeComponentDidCatch from './sections/life-cycle/componentDidCatch';
+import BitCoinPriceContainer from './sections/container-component';
 
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
       </header>
       <section>
+        <h1>Patrón Contenedor Contenido</h1>
+        <BitCoinPriceContainer />
+        <hr/>
         <h1>Componente (life-cycle --> ComponentDidCatch)</h1>
         <EjemploDeComponentDidCatch />
         <hr/>

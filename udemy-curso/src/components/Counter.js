@@ -4,6 +4,9 @@ class Counter extends Component {
     constructor(props) {
       super(props);
       this.state = { contador: this.props.contadorInicial };
+    }
+
+    componentDidMount = () => {
       this.incrementCounter(1000, 'contador');
     }
   
@@ -22,10 +25,8 @@ class Counter extends Component {
     contadorInicial: 0
   }
 
-  class CounterNumber extends Component {
-    render () {
-      return <span>{this.props.number}</span>
-    }
-  }
+  const CounterNumber = ({ number }) => (
+    <span>{number}</span>
+  )
 
   export default Counter;
